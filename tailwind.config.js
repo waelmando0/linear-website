@@ -1,8 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+	content: [
+		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx}',
+		'./app/**/*.{js,ts,jsx,tsx}',
+	],
+	theme: {
+		extend: {
+			fontFamily: {
+				sans: '"SF Pro Display", -apple-system,BilnkMacSystemFont, "Segoe UI",Robot,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue", Sans-serif',
+			},
+			colors: {
+				background: '#000212',
+			},
+		},
+	},
+	plugins: [],
+};
