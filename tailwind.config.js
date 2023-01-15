@@ -10,6 +10,11 @@ module.exports = {
 			fontFamily: {
 				sans: '"SF Pro Display", -apple-system,BilnkMacSystemFont, "Segoe UI",Robot,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue", Sans-serif',
 			},
+			fontSize: {
+				md: '1.6rem',
+				lg: '2.2rem',
+				'5xl': '8rem',
+			},
 			colors: {
 				background: '#000212',
 			},
