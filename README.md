@@ -20,3 +20,11 @@ Add To globals.css
 @tailwind components;
 @tailwind utilities;
 ```
+
+## Download class variance Authority
+
+we can make it a lot more structured when we're defining multiple variants of the same component
+
+```
+pnpm install class-variance-authority
+```
