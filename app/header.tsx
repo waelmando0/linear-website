@@ -32,7 +32,7 @@ const header = () => {
 						<ul
 							className={classNames(
 								'flex flex-col md:flex-row md:items-center h-full [&_li]:ml-4',
-								'ease-in [&_a]:duration-300 [&_a]:translate-y-8 md:[&_a]:translate-y-0  [&_a]:flex [&_a]:items-center [&_a]:h-navigation-height [&_a]:w-full [&_a]:transition-[color, transform] [&_a]:text-md md:[&_a]:text-sm [&_a:hover]:text-gray',
+								'ease-in [&_a]:duration-300 [&_a]:translate-y-8 md:[&_a]:translate-y-0  [&_a]:flex [&_a]:items-center [&_a]:h-navigation-height [&_a]:w-full [&_a]:transition-[color, transform] [&_a]:text-md md:[&_a]:text-sm [&_a]:font-medium [&_a:hover]:text-gray',
 								menuIsOpen && '[&_a]:translate-y-0'
 							)}
 						>
