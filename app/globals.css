@@ -7,7 +7,7 @@
 		--navigation-height: 3rem;
 	}
 	html {
-		@apply bg-background font-sans text-white;
+		@apply bg-background  text-white;
 	}
 
 	/* Humberger Menu  */

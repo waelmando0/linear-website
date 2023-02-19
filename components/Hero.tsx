@@ -18,9 +18,7 @@ export const HeroTitle = ({ children }: HeroElementProps) => {
 
 export const HeroSubtitle = ({ children }: HeroElementProps) => {
 	return (
-		<p className='text-sm md:text-xl mb-4 md:mb-12 max-w-sm md:max-w-xl mx-auto'>
-			{children}
-		</p>
+		<p className='mb-4 md:mb-12 max-w-sm md:max-w-xl mx-auto'>{children}</p>
 	);
 };
 

@@ -2,11 +2,12 @@ import React from 'react';
 
 // Components
 import { Hero, HeroSubtitle, HeroTitle } from '@/components/Hero';
+import Container from '@/components/Container';
 
 const Home = () => {
 	return (
 		<section>
-			<div className='max-w-6xl mx-auto px-4 sm:px-5'>
+			<Container>
 				<Hero>
 					<HeroTitle>Linear is a better way to build products</HeroTitle>
 					<HeroSubtitle>
@@ -15,7 +16,7 @@ const Home = () => {
 					</HeroSubtitle>
 					<img src='img/hero.webp' alt='Hero Image' />
 				</Hero>
-			</div>
+			</Container>
 		</section>
 	);
 };

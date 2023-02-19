@@ -7,9 +7,6 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			fontFamily: {
-				sans: '"SF Pro Display", -apple-system,BilnkMacSystemFont, "Segoe UI",Robot,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue", Sans-serif',
-			},
 			colors: {
 				white: '#fff',
 				background: '#000212',
