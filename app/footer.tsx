@@ -49,8 +49,8 @@ const footer = () => {
 	return (
 		<footer className='border-t border-custom-border mt-16'>
 			<Container>
-				<div className='grid py-8 gap-8 md:grid-cols-12 lg:py-12'>
-					<div className='lg:col-span-3 md:col-span-12 col-span-6 flex flex-row lg:flex-col justify-between'>
+				<div className='grid py-8 gap-8 md:grid-cols-12 lg:py-10'>
+					<div className='lg:col-span-4 md:col-span-12 col-span-6 flex flex-row lg:flex-col justify-between'>
 						<div>
 							<Logo />
 						</div>
@@ -72,7 +72,7 @@ const footer = () => {
 								</svg>
 							</a>
 							<a
-								className='ml-2 text-gray hover:text-white'
+								className='ml-4 text-gray hover:text-white'
 								rel='noopener'
 								href='https://github.com/linear'
 							>
@@ -92,7 +92,7 @@ const footer = () => {
 								</svg>
 							</a>
 							<a
-								className='ml-2 text-gray hover:text-white'
+								className='ml-4 text-gray hover:text-white'
 								rel='noopener'
 								href='https://linear.app/join-slack'
 							>
@@ -120,8 +120,13 @@ const footer = () => {
 							<h3 className='mb-2 font-medium'>{column.title}</h3>
 							<ul>
 								{column.links.map((link) => (
-									<li key={link.title} className='[&_a]:last:mb-0 text-gray'>
-										<Link href={link.href}>{link.title}</Link>
+									<li
+										key={link.title}
+										className='[&_a]:last:mb-0 text-gray mb-2'
+									>
+										<Link href={link.href} className='hover:text-white'>
+											{link.title}
+										</Link>
 									</li>
 								))}
 							</ul>

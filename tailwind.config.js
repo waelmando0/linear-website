@@ -13,6 +13,7 @@ module.exports = {
 				'custom-border': 'rgba(255, 255, 255, 0.08)',
 				gray: '#858699',
 				'gray-dark': '#222326',
+				'gray-middle': '#B4BCD0',
 			},
 			spacing: {
 				0: '0',
