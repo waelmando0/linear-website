@@ -7,17 +7,17 @@ interface ButtonProps extends VariantProps<typeof buttonClasses> {
 	href: string;
 }
 
-const buttonClasses = cva('relative rounded-full inline-flex items-center', {
+const buttonClasses = cva(' rounded-full inline-flex items-center', {
 	variants: {
 		variant: {
 			primary:
 				'font-medium bg-primary-gradient hover:text-shadow hover:box-shadow-primary',
-			secondary: '',
-			tertiary: '',
+			secondary:
+				'text-offWhite bg-white bg-opacity-10 border border-custom-border backdrop-filter-[12px] hover:bg-opacity-20 transition-colors ease-in',
 		},
 		size: {
-			small: 'text-xs px-3 h-2',
-			medium: 'text-sm px-3 h-5',
+			small: 'text-sm px-2 h-4',
+			medium: 'text-md px-3 h-5',
 			large: 'text-md px-6 h-12',
 		},
 	},
