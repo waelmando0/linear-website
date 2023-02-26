@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Logo from '@/components/Logo';
 import Link from 'next/link';
 import Container from '@/components/Container';
@@ -9,6 +9,24 @@ import classNames from 'classnames';
 
 const header = () => {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+	useEffect(() => {
+		const html = document.querySelector('html');
+
+		if (html) html.classList.toggle('overflow-hidden', menuIsOpen);
+	}, [menuIsOpen]);
+
+	useEffect(() => {
+		const closeMenuNavigation = () => setMenuIsOpen(false);
+
+		window.addEventListener('orientationchange', closeMenuNavigation);
+		window.addEventListener('resize', closeMenuNavigation);
+
+		return () => {
+			window.removeEventListener('orientationchange', closeMenuNavigation);
+			window.removeEventListener('resize', closeMenuNavigation);
+		};
+	}, [setMenuIsOpen]);
 
 	return (
 		<header className='fixed top-0 left-0 w-full backdrop-blur-[12px]'>
@@ -25,14 +43,16 @@ const header = () => {
 				>
 					<nav
 						className={classNames(
-							'fixed md:relative md:top-0 md:block top-navigation-height left-0 w-full h-[calc(100vh_-_var(--navigation-height))] md:h-auto md:w-auto md:bg-transparent md:overflow-hidden overflow-auto bg-background md:opacity-100 transition-opacity duration-500',
-							menuIsOpen ? 'opacity-100' : 'opacity-0'
+							'fixed md:relative md:top-0 md:block top-navigation-height left-0 w-full h-[calc(100vh_-_var(--navigation-height))] md:h-auto md:w-auto md:bg-transparent md:overflow-hidden overflow-auto bg-background md:opacity-100 transition-opacity duration-500 md:translate-x-0',
+							menuIsOpen
+								? 'translate-x-0 opacity-100'
+								: 'translate-x-[100vw] opacity-0'
 						)}
 					>
 						<ul
 							className={classNames(
 								'flex flex-col md:flex-row md:items-center h-full [&_li]:ml-4',
-								'ease-in [&_a]:duration-300 [&_a]:translate-y-8 md:[&_a]:translate-y-0  [&_a]:flex [&_a]:items-center [&_a]:h-navigation-height [&_a]:w-full [&_a]:transition-[color, transform] [&_a]:text-md md:[&_a]:text-sm [&_a]:font-medium [&_a:hover]:text-gray',
+								'ease-in [&_a]:duration-300 [&_a]:translate-y-8 md:[&_a]:translate-y-0  [&_a]:flex [&_a]:items-center [&_a]:h-navigation-height [&_a]:w-full [&_a]:transition-[color, transform] [&_li]:border-none [&_a]:text-md md:[&_a]:text-sm [&_a]:font-medium [&_a:hover]:text-gray',
 								menuIsOpen && '[&_a]:translate-y-0'
 							)}
 						>
