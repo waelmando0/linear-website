@@ -7,7 +7,7 @@ interface ButtonProps extends VariantProps<typeof buttonClasses> {
 	href: string;
 }
 
-const buttonClasses = cva(' rounded-full inline-flex items-center', {
+const buttonClasses = cva('relative rounded-full inline-flex items-center', {
 	variants: {
 		variant: {
 			primary:

@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 const Logo = ({ className }: { className?: string }) => {
 	return (
 		<svg
