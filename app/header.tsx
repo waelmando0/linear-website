@@ -36,8 +36,8 @@ const header = () => {
 				</Link>
 
 				{/* Desktop Nav */}
-				<nav className='hidden md:flex'>
-					<ul className='flex items-center justify-center'>
+				<nav className='hidden md:flex ml-4'>
+					<ul className='flex items-center justify-center gap-x-4 font-medium ease-in [&_a]:duration-300 [&_a:hover]:text-gray [&_a]:transition-[color]'>
 						<li>
 							<Link href='#'>Features</Link>
 						</li>
@@ -63,19 +63,22 @@ const header = () => {
 				</nav>
 
 				{/* Links */}
-				<div className='ml-auto flex items-center'>
-					<Link href='#' className='text-sm mr-4'>
+				<div className='ml-auto flex items-center font-medium'>
+					<Link
+						href='#'
+						className='text-sm mr-4 ease-in duration-200 hover:text-gray transition-color'
+					>
 						Log in
 					</Link>
 					<Button href='#'>Sign up</Button>
 				</div>
 
 				{/* Mobile Nav */}
-				<nav
+				<div
 					className='flex md:hidden ml-4'
 					onClick={() => setMenuIsOpen((open) => !open)}
 				>
-					<button className={menuIsOpen ? 'l active z-30' : 'l'}>
+					<button className={menuIsOpen ? 'l active' : 'l'}>
 						<span className='sr-only'>Toggle menu</span>
 						<svg
 							className='w-3 h-3 text-white fill-current '
@@ -88,36 +91,41 @@ const header = () => {
 						</svg>
 					</button>
 					{menuIsOpen && (
-						<div className='absolute left-0 pt-16 top-0 w-full h-screen pb-16 z-[-2] bg-background'>
-							<ul className='py-2 px-5 sm:px-6'>
-								<li>
-									<Link
-										href='/'
-										className='flex items-center py-4  text-gray-600 font-semibold text-sm tracking-wide  border-b border-gray-300'
-									>
-										About Me
-									</Link>
-								</li>
-								<li>
-									<Link
-										href='/'
-										className='flex items-center py-4  text-gray-600 font-semibold text-sm tracking-wide  border-b border-gray-300'
-									>
-										About Me
-									</Link>
-								</li>
-								<li>
-									<Link
-										href='/'
-										className='flex items-center py-4  text-gray-600 font-semibold text-sm tracking-wide  border-b border-gray-300'
-									>
-										About Me
-									</Link>
-								</li>
-							</ul>
-						</div>
+						<nav className='absolute left-0 pt-8 top-0 w-full h-screen pb-16 z-[-2] bg-background overflow-auto'>
+							<Container>
+								<ul className='font-medium  [&_li]:border-b [&_li]:border-gray-dark [&_li]:py-2 ease-in [&_a]:duration-300 [&_a:hover]:text-gray [&_a]:transition-[color]'>
+									<li>
+										<Link href='#'>Features</Link>
+									</li>
+									<li>
+										<Link href='#'>Method</Link>
+									</li>
+									<li>
+										<Link href='#'>Customers</Link>
+									</li>
+									<li>
+										<Link href='#'>Changelog</Link>
+									</li>
+									<li>
+										<Link href='#'>Integrations</Link>
+									</li>
+									<li>
+										<Link href='#'>Pricing</Link>
+									</li>
+									<li>
+										<Link href='#'>About</Link>
+									</li>
+									<li>
+										<Link href='#'>Blog</Link>
+									</li>
+									<li>
+										<Link href='#'>Careers</Link>
+									</li>
+								</ul>
+							</Container>
+						</nav>
 					)}
-				</nav>
+				</div>
 			</Container>
 		</header>
 	);
