@@ -43,6 +43,18 @@ module.exports = {
 				'page-gradient':
 					'radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120,119,198,0.3), transparent)',
 			},
+			transitionDelay: {
+				0: '0ms',
+			},
+			keyframes: {
+				'fade-in': {
+					from: { opacity: 0, transform: 'translateY(-10px)' },
+					to: { opacity: 1, transform: 'none' },
+				},
+			},
+			animation: {
+				'fade-in': 'fade-in 1000ms var(--animation-delay, 0ms) ease forwards',
+			},
 		},
 	},
 	plugins: [],

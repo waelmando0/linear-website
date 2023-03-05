@@ -28,7 +28,7 @@ const header = () => {
 		};
 	}, [setMenuIsOpen]);
 	return (
-		<header className='fixed top-0 left-0 w-full backdrop-blur-[12px]'>
+		<header className='fixed top-0 left-0 w-full backdrop-blur-[12px] z-30'>
 			<Container className='flex h-navigation-height border-b border-custom-border'>
 				{/* Logo */}
 				<Link href='/' className='flex items-center'>
