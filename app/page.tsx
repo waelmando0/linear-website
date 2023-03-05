@@ -4,6 +4,7 @@ import React from 'react';
 import { Hero, HeroSubtitle, HeroTitle } from '@/components/Hero';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
+import { HeroImage } from '@/components/HeroImage';
 
 const Home = () => {
 	return (
@@ -44,7 +45,7 @@ const Home = () => {
 				</Hero>
 			</section>
 			<section className='mt-16 md:mt-24 lg:mt-32'>
-				<img src='img/hero.webp' alt='Hero Image' />
+				<HeroImage />
 			</section>
 		</Container>
 	);

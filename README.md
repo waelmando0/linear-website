@@ -28,3 +28,7 @@ we can make it a lot more structured when we're defining multiple variants of th
 ```
 pnpm install class-variance-authority
 ```
+
+## react intersection observer to tell you when an element enters or leaves the viewport
+
+`react-intersection-observer`
