@@ -43,9 +43,6 @@ module.exports = {
 				'page-gradient':
 					'radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120,119,198,0.3), transparent)',
 			},
-			boxShadow: {
-				primary: 'rgb(80 63 205 / 50%) 0px 1px 40px',
-			},
 		},
 	},
 	plugins: [],

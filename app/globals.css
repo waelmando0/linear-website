@@ -60,6 +60,7 @@
 @layer utilities {
 	.text-shadow {
 		text-shadow: rgb(0 0 0 / 56%) 0px 3px 12px;
+		box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
 	}
 
 	.text-gradient {
