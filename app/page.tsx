@@ -25,9 +25,15 @@ const Home = () => {
 						<br className='hidden md:block' /> Streamline issues, sprints, and
 						product roadmaps.
 					</HeroSubtitle>
+					<Button href='/' variant='primary' size='large'>
+						Get started
+						<svg width='16' height='16' viewBox='0 0 16 16' fill='#fff'>
+							<path d='M5.46967 11.4697C5.17678 11.7626 5.17678 12.2374 5.46967 12.5303C5.76256 12.8232 6.23744 12.8232 6.53033 12.5303L10.5303 8.53033C10.8207 8.23999 10.8236 7.77014 10.5368 7.47624L6.63419 3.47624C6.34492 3.17976 5.87009 3.17391 5.57361 3.46318C5.27713 3.75244 5.27128 4.22728 5.56054 4.52376L8.94583 7.99351L5.46967 11.4697Z'></path>
+						</svg>
+					</Button>
 				</Hero>
 			</section>
-			<section>
+			<section className='mt-16 md:mt-24 lg:mt-32'>
 				<img src='img/hero.webp' alt='Hero Image' />
 			</section>
 		</Container>
