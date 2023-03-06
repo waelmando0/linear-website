@@ -9,7 +9,7 @@ import { HeroImage } from '@/components/HeroImage';
 const Home = () => {
 	return (
 		<Container>
-			<section className='mt-10'>
+			<section className='mt-24'>
 				<Hero>
 					<Button
 						className='animate-fade-in opacity-0 translate-y-[-1rem]'
@@ -44,7 +44,7 @@ const Home = () => {
 					</Button>
 				</Hero>
 			</section>
-			<section className='mt-16 md:mt-24 lg:mt-32'>
+			<section>
 				<HeroImage />
 			</section>
 		</Container>
