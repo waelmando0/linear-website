@@ -34,7 +34,7 @@ export const HeroImage = () => {
 				</svg>
 				<img
 					className={classNames(
-						'relative z-10 opacity-0 transition-opacity delay-[680ms]',
+						'relative z-10 opacity-0 transition-opacity delay-[680ms] rounded-lg',
 						inView && 'opacity-100'
 					)}
 					src='img/hero.webp'

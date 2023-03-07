@@ -5,6 +5,9 @@ import { Hero, HeroSubtitle, HeroTitle } from '@/components/Hero';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import { HeroImage } from '@/components/HeroImage';
+import { Client } from '@/components/Client';
+import Stars from '@/public/logos/Stars';
+import classNames from 'classnames';
 
 const Home = () => {
 	return (
@@ -46,6 +49,18 @@ const Home = () => {
 			</section>
 			<section>
 				<HeroImage />
+			</section>
+			<section className='mt-24 md:mt-60'>
+				<Client />
+				<div
+					className={classNames(
+						'mask-radial-faded pointer-events-none relative z-[-1] my-[-8.8rem] h-[40rem] overflow-hidden',
+						'[--color:#7877C6] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]',
+						'after:absolute after:top-1/2 after:-left-1/2 after:h-[142.8%] after:w-[200%] after:rounded-[50%] after:border-t after:border-[rgba(120,_119,_198,_0.4)] after:bg-background'
+					)}
+				>
+					<Stars />
+				</div>
 			</section>
 		</Container>
 	);
