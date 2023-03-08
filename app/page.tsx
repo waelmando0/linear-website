@@ -1,13 +1,14 @@
 import React from 'react';
 
 // Components
-import { Hero, HeroSubtitle, HeroTitle } from '@/components/Hero';
+import { Hero, HeroSubtitle, HeroTitle } from '@/components/section/Hero';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
-import { HeroImage } from '@/components/HeroImage';
-import { Client } from '@/components/Client';
-import Stars from '@/public/logos/Stars';
+import { HeroImage } from '@/components/section/HeroImage';
+import { Client } from '@/components/section/Client';
+import Stars from '@/components/logos/Stars';
 import classNames from 'classnames';
+import { Tools } from '@/components/section/Tools';
 
 const Home = () => {
 	return (
@@ -50,17 +51,18 @@ const Home = () => {
 			<section>
 				<HeroImage />
 			</section>
-			<section className='mt-24 md:mt-60'>
+			<section className='mt-24 md:mt-56'>
 				<Client />
 				<div
 					className={classNames(
-						'mask-radial-faded pointer-events-none relative z-[-1] my-[-8.8rem] h-[40rem] overflow-hidden',
+						'mask-radial-faded pointer-events-none relative z-[-1] my-[-12.8rem] lg:my-[-8.8rem] h-[40rem] overflow-hidden',
 						'[--color:#7877C6] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]',
 						'after:absolute after:top-1/2 after:-left-1/2 after:h-[142.8%] after:w-[200%] after:rounded-[50%] after:border-t after:border-[rgba(120,_119,_198,_0.4)] after:bg-background'
 					)}
 				>
 					<Stars />
 				</div>
+				<Tools />
 			</section>
 		</Container>
 	);
