@@ -3,6 +3,7 @@ import Button from '../Button';
 import KeyboardIllustration from '../illustration/KeyboardIllustration ';
 import { LogoLightIllustration } from '../illustration/LogoLightIllustration';
 import { ZapIllustration } from '../illustration/ZapIllustration';
+import CommandMenu from './CommandMenu';
 
 export const Tools = () => {
 	return (
@@ -71,6 +72,7 @@ export const Tools = () => {
 					<p className='text-md text-primary-text'>
 						Complete any action in seconds with global command menu.
 					</p>
+					<CommandMenu />
 				</div>
 			</div>
 		</>
