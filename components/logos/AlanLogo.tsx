@@ -1,4 +1,4 @@
-export const AlanLogo = ({ className }: { className?: String }) => (
+export const AlanLogo = ({ className }: { className?: string }) => (
 	<svg
 		className={className}
 		viewBox='0 0 180 54'

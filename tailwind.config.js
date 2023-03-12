@@ -20,6 +20,7 @@ module.exports = {
 				'primary-text': '#b4bcd0',
 				offWhite: '#f7f8f8',
 				'border-white': 'rgba(255, 255, 255, 0.08)',
+				'transparent-white': 'rgba(255, 255, 255, 0.08)',
 			},
 			spacing: {
 				0: '0',
@@ -106,6 +107,19 @@ module.exports = {
 					'90%': { opacity: 1 },
 					'100%': { opacity: 0, transform: 'translateY(min(21vw, 45rem))' },
 				},
+				zap: {
+					'0%, 9%, 11%, 100% ': {
+						fill: 'transparent',
+					},
+					'10%': {
+						fill: 'white',
+					},
+				},
+				bounce: {
+					'50%': {
+						transform: 'scale(0.98)',
+					},
+				},
 			},
 			animation: {
 				'fade-in': 'fade-in 1000ms var(--animation-delay, 0ms) ease forwards',
@@ -116,6 +130,7 @@ module.exports = {
 					'glow-line-horizontal var(--animation-duration) ease-in forwards',
 				'glow-line-vertical':
 					'glow-line-vertical var(--animation-duration) ease-in forwards',
+				zap: 'zap 2250ms calc(var(--index) * 20ms) linear infinite',
 			},
 		},
 	},
