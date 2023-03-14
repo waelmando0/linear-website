@@ -19,7 +19,7 @@ export const Tools = () => {
 				</p>
 			</div>
 			<div className='flex flex-wrap items-center gap-4  text-center'>
-				<div className='relative hidden lg:flex flex-col items-center justify-end  min-h-[30rem] bg-glass-gradient p-8 md:p-14 border border-transparent-white rounded-[2.8rem] basis-[calc(66.66%-1.6rem)] '>
+				<div className='relative hidden lg:flex flex-col items-center justify-end  min-h-[30rem] bg-glass-gradient p-8 md:p-14 border border-transparent-white rounded-[2.8rem] basis-[calc(66.66%-1.6rem)] w-full'>
 					<KeyboardIllustration />
 					<p className='text-3xl mb-2'>Built for your keyboard</p>
 					<p className='text-md text-primary-text'>
@@ -28,7 +28,7 @@ export const Tools = () => {
 						shortcuts everything. Literally everything.
 					</p>
 				</div>
-				<div className='flex flex-col items-center justify-end min-h-[30rem] relative bg-glass-gradient p-8 md:p-14 border border-transparent-white rounded-[2.8rem] lg:basis-[calc(33.33%)] basis-[calc(100%)] w-full'>
+				<div className=' hidden lg:flex flex-col items-center justify-end min-h-[30rem] relative bg-glass-gradient p-8 md:p-14 border border-transparent-white rounded-[2.8rem] basis-[calc(33.33%)] w-full'>
 					<div className='mask-linear-faded absolute top-[-3.2rem]  [&_svg]:max-w-full [&_svg]:h-auto '>
 						<ZapIllustration />
 					</div>
@@ -37,7 +37,7 @@ export const Tools = () => {
 						Built for speed with 50ms interactions and real-time sync.
 					</p>
 				</div>
-				<div className='group relative hidden lg:flex flex-col items-center justify-end min-h-[30rem] bg-glass-gradient p-8 md:p-14 border border-transparent-white rounded-[2.8rem] basis-[calc(33.33%)]'>
+				<div className='group relative hidden lg:flex flex-col items-center justify-end min-h-[30rem] bg-glass-gradient p-8 md:p-14 border border-transparent-white rounded-[2.8rem] basis-[calc(33.33%)] w-full'>
 					<div className='pointer-events-none absolute top-[-5rem] w-[130%]'>
 						<LogoLightIllustration />
 					</div>
@@ -67,12 +67,17 @@ export const Tools = () => {
 						</svg>
 					</Button>
 				</div>
-				<div className='hidden lg:flex flex-col justify-end items-center min-h-[30rem] bg-glass-gradient p-8 md:p-14 border border-transparent-white rounded-[2.8rem] basis-[calc(66.66%-1.6rem)]'>
-					<p className='text-3xl mb-2'>Meet your command line</p>
-					<p className='text-md text-primary-text'>
-						Complete any action in seconds with global command menu.
-					</p>
+				<div className='relative flex flex-col justify-start items-center min-h-[30rem] bg-glass-gradient p-8 md:p-14 border border-transparent-white rounded-[2.8rem] lg:basis-[calc(66.66%-1.6rem)] basis-[calc(100%)]  w-full'>
 					<CommandMenu />
+					{/* .opened + .thiselement */}
+					<div className='[.opened+&]:opacity-0 transition-opacity'>
+						<p className='text-3xl tracking-tight md:tracking-normal mb-2'>
+							Meet your command line
+						</p>
+						<p className='text-md text-primary-text'>
+							Complete any action in seconds with global command menu.
+						</p>
+					</div>
 				</div>
 			</div>
 		</>
